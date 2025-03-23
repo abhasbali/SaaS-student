@@ -17,7 +17,7 @@ export const NavBar = () => {
   ];
 
   const handleSmartTutorClick = () => {
-    window.open('http://localhost:8000', '_blank');
+    window.open('https://ai-teacher-avatar-by2g61qh7-abhasbalis-projects.vercel.app/', '_blank');
   };
 
   return (
@@ -43,7 +43,6 @@ export const NavBar = () => {
         
         <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => {
-            // Hide Dashboard and Create Quiz for non-signed-in users
             if (!isSignedIn && (item.href === "/dashboard" || item.href === "/quiz/generate")) {
               return null;
             }
@@ -126,7 +125,6 @@ export const NavBar = () => {
                       Smart Tutor
                     </Button>
                     {navigation.map((item) => {
-                      // Hide Dashboard and Create Quiz for non-signed-in users
                       if (!isSignedIn && (item.href === "/dashboard" || item.href === "/quiz/generate")) {
                         return null;
                       }
